@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week_5_Assessment_G_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WYp-do-tQR">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="sEm-Cx-SFB">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sEm-Cx-SFB" id="83t-E1-i6Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WYp-do-tQR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4bO-2K-5NT"/>
+                            <constraint firstItem="WYp-do-tQR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YbS-NH-hmZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WYp-do-tQR" secondAttribute="trailing" id="cqu-E4-VS5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WYp-do-tQR" secondAttribute="bottom" id="k52-IY-Ih2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="placeTableView" destination="WYp-do-tQR" id="Z6x-fS-KGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="ZGO-pp-HkF">
+            <objects>
+                <viewController id="aNt-d8-jta" customClass="LocationViewController" customModule="Week_5_Assessment_G_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TJG-tk-cee"/>
+                        <viewControllerLayoutGuide type="bottom" id="rep-0Z-pN0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EMd-Iq-4DO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rYG-b7-yGv">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rep-0Z-pN0" firstAttribute="top" secondItem="rYG-b7-yGv" secondAttribute="bottom" id="2zI-m1-Dhd"/>
+                            <constraint firstItem="rYG-b7-yGv" firstAttribute="top" secondItem="TJG-tk-cee" secondAttribute="bottom" id="a9E-EN-cAf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rYG-b7-yGv" secondAttribute="trailing" id="hP8-ES-coM"/>
+                            <constraint firstItem="rYG-b7-yGv" firstAttribute="leading" secondItem="EMd-Iq-4DO" secondAttribute="leadingMargin" id="nd0-Ak-yeZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="rYG-b7-yGv" id="gLN-fa-zx7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eze-3T-RaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="57"/>
+        </scene>
+    </scenes>
+</document>
